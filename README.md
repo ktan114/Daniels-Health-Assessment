@@ -9,4 +9,4 @@ and Cloud Firestore to store the temperature data of Chicago, Illinois between t
 
 # Source
 
-[AccuWeather]https://www.accuweather.com/en/us/chicago/60608/november-weather/348308
+[AccuWeather](https://www.accuweather.com/en/us/chicago/60608/november-weather/348308)
