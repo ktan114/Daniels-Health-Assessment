@@ -11,9 +11,9 @@ const Temperature = props => {
       ? 'info'
       : 'primary';
   const tip =
-    temperature && fahrenheit >= 50
+    temperature >= 50 && fahrenheit
       ? 'Cool Day'
-      : temperature && fahrenheit >= 32
+      : temperature >= 32 && fahrenheit
       ? 'Cold Day'
       : "Seek shelter! It's too cold!";
   return (
