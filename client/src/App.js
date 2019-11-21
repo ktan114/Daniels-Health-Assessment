@@ -10,7 +10,7 @@ class App extends Component {
   state = {
     day: 0,
     temperatures: [],
-    temperature: 0,
+    temperature: 46,
     fahrenheit: true,
     show: false,
   };

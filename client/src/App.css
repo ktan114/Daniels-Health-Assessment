@@ -1,3 +1,16 @@
 .App {
   text-align: center;
 }
+.Date__Buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+  margin: 10px auto;
+}
+.Temperature {
+  margin-top: 100px;
+}
+.Temperature__Display {
+  margin-bottom: 50px;
+}
