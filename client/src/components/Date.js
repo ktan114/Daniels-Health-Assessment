@@ -9,7 +9,7 @@ const Date = props => {
     return (
       <OverlayTrigger
         placement="bottom"
-        delay={{ show: 150, hide: 250 }}
+        delay={{ show: 150, hide: 150 }}
         overlay={
           <Tooltip>
             {value === 1 ? <span>Next</span> : <span>Previous</span>} Date
@@ -27,7 +27,6 @@ const Date = props => {
 
   return (
     <div className="Date">
-      <h1>Chicago, Illinois</h1>
       <div className="Date__Buttons">
         {leftButton}
         <h4>November {day + 1}, 2019</h4>

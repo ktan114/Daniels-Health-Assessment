@@ -1,31 +1,15 @@
 import React from 'react';
-import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
 
 const Temperature = props => {
   const { fahrenheit, temperature, convert } = props;
-  const alertColor =
-    temperature >= 50 && fahrenheit
-      ? 'success'
-      : temperature && fahrenheit >= 32
-      ? 'info'
-      : 'primary';
-  const tip =
-    temperature >= 50 && fahrenheit
-      ? 'Cool Day'
-      : temperature >= 32 && fahrenheit
-      ? 'Cold Day'
-      : "Seek shelter! It's too cold!";
   return (
     <div className="Temperature">
       <h1 className="Temperature__Display">
-        <Alert variant={alertColor}>
-          <p>
-            {temperature} {fahrenheit ? '°F' : '°C'}
-          </p>
-          <hr />
-          <p>{tip}</p>
-        </Alert>
+        <h1>Chicago, Illinois</h1>
+        <hr />
+        {temperature} {fahrenheit ? '°F' : '°C'}
+        <hr />
       </h1>
       <Button size="lg" variant="primary" onClick={convert}>
         Convert to {fahrenheit ? '°C' : '°F'}

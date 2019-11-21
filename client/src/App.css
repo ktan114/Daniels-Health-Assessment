@@ -1,5 +1,12 @@
 .App {
   text-align: center;
+  background: url('./assets//images/Chicago.jpg');
+  background-size: cover;
+  opacity: 0.8;
+  height: 100vh;
+}
+.Date {
+  padding-top: 80px;
 }
 .Date__Buttons {
   display: flex;
@@ -9,8 +16,19 @@
   margin: 10px auto;
 }
 .Temperature {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 .Temperature__Display {
+  background-color: #d1ecf1;
+  opacity: 0.9;
+  width: 30%;
+  margin: 0 auto;
+  border: 5px solid black;
   margin-bottom: 50px;
+}
+.Alert {
+  opacity: 0.9;
+  width: 25%;
+  margin: 0 auto;
+  border: 5px solid black;
 }
