@@ -1,34 +1,62 @@
-.App {
-  text-align: center;
-  background: url('./assets//images/Chicago.jpg');
-  background-size: cover;
-  opacity: 0.8;
-  height: 100vh;
+
+
+@media only screen and (min-width: 300px) {
+  .App {
+    text-align: center;
+    background: url('./assets//images/Chicago.jpg');
+    background-size: cover;
+    opacity: 0.8;
+    height: 100vh;
+  }
+  .Date {
+    padding-top: 80px;
+  }
+  .Date__Buttons {
+    width: 90%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px auto;
+  }
+  .Temperature {
+    margin-top: 50px;
+  }
+  .Temperature__Display {
+    background-color: #d1ecf1;
+    opacity: 0.9;
+    width: 30%;
+    margin: 0 auto;
+    border: 5px solid black;
+    margin-bottom: 50px;
+  }
+  .Alert {
+    opacity: 0.9;
+    width: 25%;
+    margin: 0 auto;
+    border: 5px solid black;
+  }
+  .Temperature__Display {
+    width: 80%;
+  }
 }
-.Date {
-  padding-top: 80px;
+
+@media only screen and (min-width: 900px) {
+  .Date__Buttons {
+    width: 50%;
+    background: none;
+  }
+  .Temperature__Display {
+    width: 50%;
+  }
 }
-.Date__Buttons {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 30%;
-  margin: 10px auto;
-}
-.Temperature {
-  margin-top: 50px;
-}
-.Temperature__Display {
-  background-color: #d1ecf1;
-  opacity: 0.9;
-  width: 30%;
-  margin: 0 auto;
-  border: 5px solid black;
-  margin-bottom: 50px;
-}
-.Alert {
-  opacity: 0.9;
-  width: 25%;
-  margin: 0 auto;
-  border: 5px solid black;
+
+@media only screen and (min-width: 1040px) {
+  .Date__Buttons {
+    width: 30%;
+    background: none;
+  }
+  .Temperature__Display {
+    width: 30%;
+  }
 }
