@@ -4,6 +4,7 @@ import './App.css';
 import database from './firebase';
 import Date from './components/Date';
 import Temperature from './components/Temperature';
+import DisplayAlert from './components/DisplayAlert';
 
 class App extends Component {
   state = {
@@ -11,6 +12,7 @@ class App extends Component {
     temperatures: [],
     temperature: 0,
     fahrenheit: true,
+    show: false,
   };
 
   componentDidMount() {
@@ -46,12 +48,8 @@ class App extends Component {
   changeDay = value => {
     let { day } = this.state;
     const { temperatures } = this.state;
-    if (day === 0 && value === -1) {
-      alert('You are at the beginning of the weather display!');
-      return;
-    }
-    if (day === 9 && value === 1) {
-      alert('You are at the end of the weather display!');
+    if ((day === 0 && value === -1) || (day === 9 && value === 1)) {
+      this.handleModal()
       return;
     }
     day += value;
@@ -77,10 +75,15 @@ class App extends Component {
     }));
   };
 
+  handleModal = () => {
+    this.setState(prevState => ({ show: !prevState.show }));
+  };
+
   render() {
-    const { temperature, fahrenheit, day } = this.state;
+    const { temperature, fahrenheit, day, show } = this.state;
     return (
       <div className="App">
+        <DisplayAlert show={show} day={day} handleModal={this.handleModal} />
         <Date day={day} changeDay={this.changeDay} />
         <Temperature
           temperature={temperature}
