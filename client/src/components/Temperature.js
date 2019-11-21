@@ -1,13 +1,14 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button'
 
 const Temperature = props => {
   const { fahrenheit, temperature, convert } = props;
   return (
-    <div>
-      <h1>
+    <div className="Temperature">
+      <h1 className="Temperature__Display">
         {temperature} {fahrenheit ? '°F' : '°C'}
       </h1>
-      <button onClick={convert}>Convert to {fahrenheit ? '°C' : '°F'}</button>
+      <Button size="lg" variant="primary" onClick={convert}>Convert to {fahrenheit ? '°C' : '°F'}</Button>
     </div>
   );
 };
